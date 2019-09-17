@@ -11,7 +11,15 @@
 
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
+      <select>
+        <option value="red">High Priority</option>
+        <option value="yellow">Medium Priority</option>
+        <option value="green">Low Priority</option>
+      </select>
+      <input type='text' id='user-name' placeholder='username'></input>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <input type='text' id='duration' placeholder='duration'></input>
+      <input type='date' id='due-date'></input>
       <input type="submit" value="Create New Task">
     </form>
 
@@ -23,6 +31,11 @@
 
     <script src="./src/index.js"></script>
   </div>
-
+  <script> 
+    function deleteTask(event){
+          let parentOfButton = event.target.parentNode
+          parentOfButton.remove()
+        }
+  </script>
 </body>
 </html>
